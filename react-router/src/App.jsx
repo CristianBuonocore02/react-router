@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout.jsx";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Products from "./pages/Products.jsx";
+import Layout from "./components/layout.jsx";
+import Home from "./pages/home.jsx";
+import About from "./pages/about.jsx";
+import Products from "./pages/products.jsx";
 
 export default function App() {
     return (
