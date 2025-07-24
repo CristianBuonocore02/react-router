@@ -4,4 +4,4 @@ export default function Home() {
 
 }
 
-console.log("home");
+console.log("homepage");
