@@ -14,20 +14,22 @@ export default function Productinfo() {
     if (!product) return null;
 
     return (
-        <div className="row">
-            <div className="col-md-5">
-                <img
-                    src={product.image}
-                    alt={product.title}
-                    className="img-fluid"
-                    style={{ maxHeight: "400px", objectFit: "contain" }}
-                />
-            </div>
-            <div className="col-md-7">
-                <h2>{product.title}</h2>
-                <p className="text-muted">{product.category}</p>
-                <p>{product.description}</p>
-                <h4>{product.price}€</h4>
+        <div className="row d-flex justify-content-center">
+            <div className="card col-8 ">
+                <div className="col d-flex justify-content-center p-4">
+                    <img
+                        src={product.image}
+                        alt={product.title}
+                        className="img-fluid"
+                        style={{ maxHeight: "300px", objectFit: "contain" }}
+                    />
+                </div>
+                <div className="col text-center  p-4">
+                    <h2>{product.title}</h2>
+                    <p className="text-muted">{product.category}</p>
+                    <p>{product.description}</p>
+                    <h4 className="border rounded">{product.price}€</h4>
+                </div>
             </div>
         </div>
     );
