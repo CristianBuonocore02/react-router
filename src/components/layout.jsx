@@ -8,6 +8,9 @@ export default function Layout() {
             <main className="container mt-4">
                 <Outlet />
             </main>
+            <aside>
+                sidebar
+            </aside>
         </>
     );
 }

@@ -1,11 +1,12 @@
 // src/pages/Products.jsx
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Products() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Chiamata API al montaggio
+    // Chiamata API 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
             .then((res) => res.json())
@@ -31,7 +32,11 @@ export default function Products() {
                                 style={{ height: "200px", objectFit: "contain" }}
                             />
                             <div className="card-body d-flex flex-column">
-                                <h5 className="card-title">{product.title}</h5>
+                                <h5 className="card-title">
+                                    <Link to={`/products/${product.id}`} className="text-decoration-none">
+                                        {product.title}
+                                    </Link>
+                                </h5>
                                 <p className="card-text text-truncate">{product.description}</p>
                                 <div className="mt-auto">
                                     <strong>{product.price}€</strong>
