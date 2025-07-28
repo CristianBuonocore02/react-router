@@ -1,18 +1,17 @@
-// src/pages/ProductDetail.jsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export default function ProductDetail() {
+export default function Productinfo() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then((res) => res.json())
-            .then((data) => {
-                setProduct(data);
-            });
+            .then((data) => setProduct(data));
     }, [id]);
+
+    if (!product) return null;
 
     return (
         <div className="row">

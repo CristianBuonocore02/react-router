@@ -3,6 +3,8 @@ import Layout from "./components/layout.jsx";
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Products from "./pages/products.jsx";
+import ProductInfo from "./pages/ProductInfo.jsx";
+
 
 export default function App() {
     return (
@@ -11,6 +13,7 @@ export default function App() {
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="products" element={<Products />} />
+                <Route path="products/:id" element={<ProductInfo />} />
             </Route>
         </Routes>
     );
